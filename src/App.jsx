@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import './App.css'
 import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Provider} from "react-redux";
+import { store } from './Redux/store';
 import DashboardCards from './Components/DashboardCards';
 import UserList from './Components/UserList';
 import ProductList from './Components/ProductList';
@@ -8,10 +10,10 @@ import ContactList from './Components/ContactList';
 import ContactForm from './Components/ContactForm';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
+    <Provider store={store}>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<DashboardCards />}/>
@@ -21,6 +23,7 @@ function App() {
           <Route path="/contactform" element={<ContactForm />}/>
         </Routes>
       </BrowserRouter>
+      </Provider>
     </>
   )
 }

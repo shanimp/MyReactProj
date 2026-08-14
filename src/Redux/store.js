@@ -3,9 +3,8 @@ import { ProductApi } from "./Slices/ProductSlice";
 
 export const store = configureStore({
     reducer: {
-       [ProductApi.reducerPath]: ProductApi.reducer, 
+        [ProductApi.reducerPath]: ProductApi.reducer, 
     },
-    middleware: (getDefaultMiddleware) => {
-        //getDefaultMiddleware().concat(ProductApi.middleware),
-    }
-})
+    middleware: (getDefaultMiddleware) =>
+        getDefaultMiddleware().concat(ProductApi.middleware),
+});
