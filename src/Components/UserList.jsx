@@ -24,6 +24,7 @@ const UserList = () => {
       </>
     );
   }
+
   return (
     <div>
       <div className="max-w-4xl mx-auto p-6 font-sans">
@@ -52,7 +53,11 @@ const UserList = () => {
                   {user.company.name}
                 </span>
               </div>
-              <button>See Post Details</button>
+              <button
+                onClick={() => {
+                  navigate(`/userposts/${user.id}`)
+              }}
+              >See Post Details</button>
             </li>
           ))}
         </ul>

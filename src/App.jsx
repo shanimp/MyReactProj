@@ -8,6 +8,7 @@ import UserList from './Components/UserList';
 import ProductList from './Components/ProductList';
 import ContactList from './Components/ContactList';
 import ContactForm from './Components/ContactForm';
+import UserPosts from './Components/UserPosts';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/productlist" element={<ProductList />}/>
           <Route path="/contactlist" element={<ContactList />}/>
           <Route path="/contactform" element={<ContactForm />}/>
+          <Route path="/userposts/:userid" element={<UserPosts />}/>
         </Routes>
       </BrowserRouter>
       </Provider>
