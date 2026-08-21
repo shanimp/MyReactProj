@@ -9,6 +9,7 @@ import ProductList from './Components/ProductList';
 import ContactList from './Components/ContactList';
 import ContactForm from './Components/ContactForm';
 import UserPosts from './Components/UserPosts';
+import EditContact from './Components/EditContact';
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/contactlist" element={<ContactList />}/>
           <Route path="/contactform" element={<ContactForm />}/>
           <Route path="/userposts/:userid" element={<UserPosts />}/>
+          <Route path="/editcontact/:contactid" element={<EditContact />}/>
         </Routes>
       </BrowserRouter>
       </Provider>

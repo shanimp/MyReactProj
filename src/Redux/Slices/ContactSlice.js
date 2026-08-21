@@ -82,4 +82,4 @@ export const {
     submitFormFailure,
 } = ContactSlice.actions;
 
-export default ContactSlice.reducer;
+export default ContactSlice;
